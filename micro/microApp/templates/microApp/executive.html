@@ -24,7 +24,7 @@
             <div class="card" style="width:18 em">
                     <div class="card-body">
                         <h5 class="card-title mb-4">kindly fill the details</h5>
-                          <form action="{% url 'farmerDetails' %}" method="POST">
+                          <form action="{% url 'executiveDetails' %}" method="POST">
                             {% csrf_token %}
                             <label for="area" class="mb-2">Area of field</label>
                              <input type="text" id="area" class="form-control mb-2" name="area">
@@ -37,6 +37,8 @@
 
                              <label for="ll" class=" mb-2">Longitude,Latitude</label>
                              <input type="text" id="ll" class="form-control mb-2" name="ll">
+
+                             <!-- <input type="file" id="image" name="landImage"> -->
 
                              <Button type="submit" class="btn btn-primary">Submit</Button>
 

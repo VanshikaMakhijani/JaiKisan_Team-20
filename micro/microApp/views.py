@@ -7,6 +7,7 @@ from geopy import distance
 from geopy.geocoders import Nominatim
 import osmnx as ox
 import networkx as nx
+import math
 lat1, lon1 = -37.82120, 144.96441 # location 1
 lat2, lon2 = -37.88465,  145.08727 # location 2
 
@@ -44,7 +45,36 @@ def executiveRegister(request):
     return render(request,'microApp/executive.html')
 
 def executiveDetails(request):
-    pass
+    area=float(request.POST['area'])
+    soil=request.POST['soil']
+    crops=request.POST['crops']
+    coordinates=request.POST['ll']
+    # print(coordinates)
+    coordinates=coordinates.split(",")
+    areaC=0
+    n=len(coordinates)
+    if(n>2):
+        for i in range(n-1):
+             p1=coordinates[i]
+             p2=coordinates[i+1]
+             latitude1=float(p1.split()[0])
+             longitude1=float(p1.split()[1])
+             latitude2 = float(p2.split()[0])
+             longitude2 =float(p2.split()[1])
+             # print(p1,p2)
+             print(latitude1,longitude1,latitude2,longitude2)
+             areaC += math.radians(longitude2 - longitude1) * (
+                    2 + math.sin(math.radians(latitude1)) + math.sin(math.radians(latitude2)))
+        areaC=areaC*6378137*6378137/2
+    areaC=math.fabs(areaC)
+    if area==areaC:
+        print("correct")
+        return render(request,'microApp/success.html')
+    else:
+        print("incorrect")
+        return render(request,'microApp/executive.html')
+
+
 
 
 
