@@ -1,0 +1,240 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+  }
+  
+  /* navbar */
+  .sidebar {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .9));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 7px 25px #999;
+  }
+  
+  .bottom-border {
+    border-bottom: 1px groove #eee;
+  }
+  
+  .sidebar-link {
+    transition: all .4s;
+  }
+  
+  .sidebar-link:hover {
+    background-color: #444;
+    border-radius: 5px;
+  }
+  
+  .current {
+    background-color: #f44336;
+    border-radius: 7px;
+    box-shadow: 2px 5px 10px #111;
+    transition: all .3s;
+  }
+  
+  .current:hover {
+    background-color: #f66436;
+    border-radius: 7px;
+    box-shadow: 2px 5px 20px #111;
+    transform: translateY(-1px);
+  }
+  
+  .search-input {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #999;
+    transition: all .4s;
+  }
+  
+  .search-input:focus {
+    background: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #dc3545;
+  }
+  
+  .search-button {
+    border-radius: 50%;
+    padding: 10px 16px;
+    transition: all .4s;
+  }
+  
+  .search-button:hover {
+    background-color: #eee;
+    transform: translateY(-1px);
+  }
+  
+  .icon-parent {
+    position: relative;
+  }
+  
+  .icon-bullet::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    background-color: #f44336;
+    border-radius: 50%;
+  }
+  .choose {
+    background: url(chose.png);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 90px 0 60px 0;
+}
+
+.choose .titlepage h2 {
+    color: #fff;
+}
+.point h3 {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    border: #cfd8b7 solid 18px;
+    font-size: 37px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #6b7908;
+}
+
+.point span {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 22px;
+    padding-top: 28px;
+    display: block;
+} 
+.contact {
+    background: #fff;
+    padding-top: 90px;
+}
+
+.map-responsive {margin-top: 90px;}
+.main_form .form_control {
+    padding: 0 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 66px;
+    background: #fff;
+    color: #999998;
+    font-size: 18px;
+    font-weight: normal;
+    border: #6b7908 solid 3px;
+}
+
+.main_form .textarea {
+    margin-bottom: 40px;
+    width: 100%;
+    background: #fff;
+    color: #999998 !important;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 15px 20px 15px 20px;
+    border: #6b7908 solid 3px;
+    height: 179px;
+}
+
+
+.group_btn {display: flex; justify-content: center;}
+
+.main_form .send_btn {
+    font-size: 20px;
+    transition: ease-in all 0.5s;
+    background-color: #323232;
+    text-transform: uppercase;
+    color: #fff;
+    max-width: 169px;
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    height: 69px;
+    line-height: 69px;
+    margin: 0 5px;
+    border-radius: 10px;
+}
+
+.main_form .send_btn:hover {
+    background-color: #6b7908;
+    transition: ease-in all 0.5s;
+    color: #fff;
+}
+
+#request *::placeholder {
+    color: #d0d0cf;
+    opacity: 1;
+}
+
+.datepicker-days {
+    padding: 20px;
+}
+.copyright {
+    margin-top: 70px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background: #6b7908;
+}
+ul.social_icon {text-align: right;}
+ul.social_icon li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+ul.social_icon li a i {
+    font-size: 17px;
+    color: #fff;
+    transition: ease-in all 0.5s;
+    line-height: 30px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+ul.social_icon li a i:hover {
+    color: #111111;
+    transition: ease-in all 0.5s;
+
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 17px;
+    line-height: 22px;
+    text-align: left;
+    font-weight: normal;
+}
+
+.copyright a {
+    color: #fff;
+}
+
+.copyright a:hover {
+    color: #111111;
+}
+
+
+
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: static;
+      height: auto;
+    }
+  
+    .top-navbar {
+      position: static;
+    }
+    .point {margin-bottom: 30px;}
+
+  }
+  /* end of navbar */
